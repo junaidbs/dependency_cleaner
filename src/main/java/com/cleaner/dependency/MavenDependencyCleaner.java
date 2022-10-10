@@ -31,8 +31,9 @@ import org.json.JSONException;
 public class MavenDependencyCleaner
 {
 
-	static String line = "", str = "";
-	static String projectPath = "C:/Users/JUNAID B S/Downloads/dependency_cleaner (1)/dependency_cleaner/";
+	static String line = "";
+	static String str = "";
+	static String projectPath;
 	static String jarEndString = "Tomcat started on port(s):";
 
 	public static void main(String[] args)
@@ -44,24 +45,24 @@ public class MavenDependencyCleaner
 			System.exit(0);
 
 		}
+		projectPath = args[0];
 		if (args.length == 2)
 		{
+			// customized jar stop statement
 			jarEndString = args[1];
 		}
 
-		// one input and other output
-
 		try
 		{
+			// creating backup pom
 			File src = new File(projectPath + "pom.xml");
 			File dest = new File(projectPath + "backup_pom.xml");
 			Files.copy(src.toPath(), dest.toPath());
 		} catch (Exception e)
 		{
+			// exception will throw if backup file already exist
 
 		}
-
-		// using copy(InputStream,Path Target); method
 
 		MavenXpp3Reader reader = new MavenXpp3Reader();
 		Model model = reader.read(new FileReader(projectPath + "pom.xml"));
@@ -80,13 +81,12 @@ public class MavenDependencyCleaner
 			{
 				if (!(buildJar() && checkJarRunnable(jarName)))
 				{
-
 					model.addDependency(dependency);
 					savepom(model);
-					System.out.println("dependency required");
+					System.out.println("-----------------used dependency deletion failed--------------------");
 				} else
 				{
-					System.out.println("dependency deleted");
+					System.out.println("------------------ unused dependency deletion succesfull-------------------");
 				}
 
 			} catch (MavenInvocationException e)
@@ -97,9 +97,6 @@ public class MavenDependencyCleaner
 			}
 		}
 
-		// buildJar();
-		// checkJarRunnable();
-
 	}
 
 	private static void savepom(Model model)
@@ -109,7 +106,6 @@ public class MavenDependencyCleaner
 			new MavenXpp3Writer().write(new FileOutputStream(new File(projectPath, "pom.xml")), model);
 		} catch (java.io.IOException e)
 		{
-
 			e.printStackTrace();
 		}
 	}
@@ -122,7 +118,7 @@ public class MavenDependencyCleaner
 		request.setGoals(Collections.singletonList("clean install -DskipTests"));
 
 		Invoker invoker = new DefaultInvoker();
-		invoker.setMavenHome(new File("C:/Users/JUNAID B S/Downloads/apache-maven-3.8.6-bin/apache-maven-3.8.6"));
+		invoker.setMavenHome(new File("apache-maven-3.8.6"));
 		InvocationResult result = invoker.execute(request);
 
 		if (result.getExitCode() != 0)
@@ -130,7 +126,7 @@ public class MavenDependencyCleaner
 			return false;
 		} else
 		{
-			System.out.println("succes");
+			System.out.println("-------------------jar builded successfully--------------------");
 			return true;
 		}
 	}
@@ -162,11 +158,8 @@ public class MavenDependencyCleaner
 				{
 					succesflag = true;
 					process.destroy();
-
 				}
-
 			}
-
 			return succesflag;
 		} catch (IOException e)
 		{

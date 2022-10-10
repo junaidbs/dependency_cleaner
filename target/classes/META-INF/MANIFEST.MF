@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: JUNAID B S
+Build-Jdk: 11.0.12
+Class-Path: lib/maven-invoker-2.1.1.jar lib/plexus-component-annotations
+ -1.5.5.jar lib/json-20220924.jar lib/maven-model-3.8.6.jar lib/plexus-u
+ tils-3.4.2.jar
+Main-Class: com.cleaner.dependency.MavenDependencyCleaner
+Created-By: Maven Integration for Eclipse
+

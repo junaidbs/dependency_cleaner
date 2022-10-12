@@ -1,4 +1,4 @@
-# Dependency_cleaner
+# DEPENDENCY CLEANER
 Dependency cleaner for maven projects (customized for springboot)
 
 I'm presently working on a Maven-built Java code base that is rather massive. 

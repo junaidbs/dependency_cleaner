@@ -18,7 +18,7 @@ https://github.com/junaidbs/dependency_cleaner/releases/tag/v0.2.0-alpha
 
 > type  java -jar dependencycleaner-0.0.1-SNAPSHOT.jar {spring boot project path where pom file located} {spring boot service stop statement(optional)}
 
->first argument -path to spring boot maven folder where jar located
+>first argument -path to spring boot maven folder where POM located
 
 >second argument -spring boot service stop statement(optional)
 

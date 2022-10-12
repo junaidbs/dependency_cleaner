@@ -11,6 +11,17 @@ I've seldom ever seen somebody remove dependencies from a build that is already 
  You can get the rar to your machine with the following link
 https://github.com/junaidbs/dependency_cleaner/releases/tag/v0.2.0-alpha
 
+# HOW ITS WORKS
+
+Automate these steps
+
+* Remove dependency
+* Build jar file 
+* If ibuild succesfull then 
+* Run jar file to ensure no runtime dependency removed
+* If jar run succesfully->dependecy will remove
+* If build failed or run jar failed  ->dependecy  will not delete
+
 # HOW TO USE
 * Download and extract
 
@@ -36,6 +47,6 @@ If  removed dependency needful for the project then "-----------------used depen
 ![logs3](https://user-images.githubusercontent.com/70962606/195415732-71b7ee81-ba4e-4825-a007-68487fac5f91.jpg)
 If  removed dependency not needful for the project then "-----------------unused dependency deletion succesfull--------------------" message show
 
-IT WILL CREATE BACKUP POM "backup_pom.xml" SO YOU CAN COMPARE 
+It create a backup pom "backup_pom.xml" so you can compare later
 
 JAVA FILE-> https://github.com/junaidbs/dependency_cleaner/blob/v0.2.0-alpha/src/main/java/com/cleaner/dependency/MavenDependencyCleaner.java

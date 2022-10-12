@@ -1,0 +1,40 @@
+# dependency_cleaner
+Dependency cleaner for maven projects (customized for springboot)
+
+I'm presently working on a Maven-built Java code base that is rather massive. 
+There are 12 web apps, 190 Maven modules, and one million Java lines in it. With a code base like this, there is a lot of history. 
+I've got the impression that we likely have some unused Maven dependencies for some time. When code is altered and moved around over time, 
+this occurs rather frequently. Additionally, increasing new dependents is typically the solution to dependence problems. 
+I've seldom ever seen somebody remove dependencies from a build that is already functional.
+
+
+ You can get the rar to your machine with the following link
+ 
+https://github.com/junaidbs/dependency_cleaner/releases/tag/v0.2.0-alpha
+
+>download and extract
+
+> run cmd inside folder
+
+> type  java -jar dependencycleaner-0.0.1-SNAPSHOT.jar {spring boot project path where pom file located} {spring boot service stop statement(optional)}
+
+>first argument -path to spring boot maven folder where jar located
+
+>second argument -spring boot service stop statement(optional)
+
+![run_command](https://user-images.githubusercontent.com/70962606/195415362-b98451e9-0fb9-4860-93e0-490d9bdf68fc.jpg)
+
+
+OUTPUT
+![logs](https://user-images.githubusercontent.com/70962606/195415565-813bf577-e338-44ac-9ccf-968abd717a59.jpg)
+
+
+![logs1](https://user-images.githubusercontent.com/70962606/195415717-1d79042b-0725-4d9a-8da1-0766fdb9693f.jpg)
+
+
+![logs3](https://user-images.githubusercontent.com/70962606/195415732-71b7ee81-ba4e-4825-a007-68487fac5f91.jpg)
+
+it will save a backup file named as "backup_pom.xml" so you can compare it later
+
+
+you can get java file from here https://github.com/junaidbs/dependency_cleaner/blob/v0.2.0-alpha/src/main/java/com/cleaner/dependency/MavenDependencyCleaner.java

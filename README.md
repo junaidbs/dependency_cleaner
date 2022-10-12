@@ -33,8 +33,8 @@ if  removed dependency needful for the project then "-----------------used depen
 
 
 ![logs3](https://user-images.githubusercontent.com/70962606/195415732-71b7ee81-ba4e-4825-a007-68487fac5f91.jpg)
-if  removed dependency needful for the project then "-----------------unused dependency deletion succesfull--------------------" message show
-it will save a backup file named as "backup_pom.xml" so you can compare it later
+if  removed dependency not needful for the project then "-----------------unused dependency deletion succesfull--------------------" message show
 
+IT WILL CREATE BACKUP POM "backup_pom.xml" SO YOU CAN COMPARE 
 
-you can get java file from here https://github.com/junaidbs/dependency_cleaner/blob/v0.2.0-alpha/src/main/java/com/cleaner/dependency/MavenDependencyCleaner.java
+JAVA FILE-> https://github.com/junaidbs/dependency_cleaner/blob/v0.2.0-alpha/src/main/java/com/cleaner/dependency/MavenDependencyCleaner.java

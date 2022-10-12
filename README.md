@@ -27,13 +27,13 @@ https://github.com/junaidbs/dependency_cleaner/releases/tag/v0.2.0-alpha
 
 OUTPUT
 ![logs](https://user-images.githubusercontent.com/70962606/195415565-813bf577-e338-44ac-9ccf-968abd717a59.jpg)
-
+if  removed dependency needful for the project then "-----------------used dependency deletion failed--------------------" message show
 
 ![logs1](https://user-images.githubusercontent.com/70962606/195415717-1d79042b-0725-4d9a-8da1-0766fdb9693f.jpg)
 
 
 ![logs3](https://user-images.githubusercontent.com/70962606/195415732-71b7ee81-ba4e-4825-a007-68487fac5f91.jpg)
-
+if  removed dependency needful for the project then "-----------------unused dependency deletion succesfull--------------------" message show
 it will save a backup file named as "backup_pom.xml" so you can compare it later
 
 

@@ -1,4 +1,4 @@
-# dependency_cleaner
+# Dependency_cleaner
 Dependency cleaner for maven projects (customized for springboot)
 
 I'm presently working on a Maven-built Java code base that is rather massive. 
@@ -9,23 +9,24 @@ I've seldom ever seen somebody remove dependencies from a build that is already 
 
 
  You can get the rar to your machine with the following link
- 
 https://github.com/junaidbs/dependency_cleaner/releases/tag/v0.2.0-alpha
 
->Download and extract
+# HOW TO USE
+* Download and extract
 
-> Run cmd inside folder
+* Run cmd inside folder
 
-> Type  java -jar dependencycleaner-0.0.1-SNAPSHOT.jar {spring boot project path where pom file located} {spring boot service stop statement(optional)}
+* Type  java -jar dependencycleaner-0.0.1-SNAPSHOT.jar {spring boot project path where pom file located} {spring boot service stop statement(optional)}
 
->First argument -path to spring boot maven folder where POM located
+* First argument -path to spring boot maven folder where POM located
 
->Second argument -spring boot service stop statement(optional)
+* Second argument -spring boot service stop statement(optional)
 
 ![run_command](https://user-images.githubusercontent.com/70962606/195415362-b98451e9-0fb9-4860-93e0-490d9bdf68fc.jpg)
 
 
-OUTPUT
+# OUTPUT
+
 ![logs](https://user-images.githubusercontent.com/70962606/195415565-813bf577-e338-44ac-9ccf-968abd717a59.jpg)
 If  removed dependency needful for the project then "-----------------used dependency deletion failed--------------------" message show
 

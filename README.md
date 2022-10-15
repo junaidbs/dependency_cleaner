@@ -2,7 +2,8 @@
 Dependency cleaner for maven projects (customized for springboot)
 
 Dependency cleaner is a program built for Springboot projects(Maven) to make removing dependencies from your projects easier.
-The idea came to me when I was in work and noticed our POM file becoming convoluted and in turn, hard to manage  and hard to find unused Dependency.
+The inspiration struck me while I was at work and saw how our POM file was growing complicated, making it difficult to
+maintain and difficult to locate unneeded Dependencies.
 
 
  You can get the rar to your machine with the following link

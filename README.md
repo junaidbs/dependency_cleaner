@@ -33,14 +33,14 @@ To use the Dependency Cleaner tool, follow these steps:
 # OUTPUT
 
 ![logs](https://user-images.githubusercontent.com/70962606/195415565-813bf577-e338-44ac-9ccf-968abd717a59.jpg)
-If  removed dependency needful for the project then "-----------------used dependency deletion failed--------------------" message show
+If a removed dependency is required for the project, the message "Dependency deletion failed, the removed dependency is still being used" will be displayed.
 
 ![logs1](https://user-images.githubusercontent.com/70962606/195415717-1d79042b-0725-4d9a-8da1-0766fdb9693f.jpg)
 
 
 ![logs3](https://user-images.githubusercontent.com/70962606/195415732-71b7ee81-ba4e-4825-a007-68487fac5f91.jpg)
-If  removed dependency not needful for the project then "-----------------unused dependency deletion succesfull--------------------" message show
+If a removed dependency is not needed for the project, the message "Unused dependency deletion successful" will be displayed.
 
-It create a backup pom "backup_pom.xml" so you can compare later
+The tool creates a backup of the original POM file as "backup_pom.xml", allowing you to compare it with the modified POM file later.
 
 JAVA FILE-> https://github.com/junaidbs/dependency_cleaner/blob/v0.2.0-alpha/src/main/java/com/cleaner/dependency/MavenDependencyCleaner.java

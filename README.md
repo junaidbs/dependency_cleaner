@@ -13,23 +13,19 @@ https://github.com/junaidbs/dependency_cleaner/releases/tag/v0.2.0-alpha
 
 Automate these steps
 
-* Remove dependency
-* Build jar file 
-* If ibuild succesfull then 
-* Run jar file to ensure no runtime dependency removed
-* If jar run succesfully->dependecy will remove
-* If build failed or run jar failed  ->dependecy  will not delete
+To use the Dependency Cleaner tool, follow these steps:
 
-# HOW TO USE
-* Download and extract
-
-* Run cmd inside folder
-
-* Type  java -jar dependencycleaner-0.0.1-SNAPSHOT.jar {spring boot project path where pom file located} {spring boot service stop statement(optional)}
-
-* First argument -path to spring boot maven folder where POM located
-
-* Second argument -spring boot service stop statement(optional)
+* Download and extract the tool.
+* Open a command prompt inside the extracted folder.
+* Type the following command: java -jar dependencycleaner-0.0.1-SNAPSHOT.jar {path-to-spring-boot-maven-folder} {optional-spring-boot-service-stop-statement}.
+* Replace {path-to-spring-boot-maven-folder} with the path to the folder containing your Spring Boot project's POM file.
+* Optionally, add a {optional-spring-boot-service-stop-statement} to stop the Spring Boot service.
+# The tool will automate the following steps:
+* Remove dependencies.
+* Build a JAR file.
+* Run the JAR file to ensure that no runtime dependency is missing.
+* If the JAR file runs successfully, the dependencies will be removed.
+* If the build or run fails, the dependencies will not be removed.
 
 ![run_command](https://user-images.githubusercontent.com/70962606/195415362-b98451e9-0fb9-4860-93e0-490d9bdf68fc.jpg)
 

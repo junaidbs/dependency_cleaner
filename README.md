@@ -9,7 +9,7 @@ maintain and difficult to locate unneeded Dependencies.
  You can get the rar to your machine with the following link
 https://github.com/junaidbs/dependency_cleaner/releases/tag/v0.2.0-alpha
 
-# HOW ITS WORKS
+# HOW TO USE
 
 
 
